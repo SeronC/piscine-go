@@ -1,0 +1,91 @@
+connect code editor with gitea workspace:
+git config --global credential.helper store
+git clone https://learn.01founders.co/git/schander/piscine-go.git
+
+#! /bin/bash required at start
+type this in terminal to start new code:
+code NewFileName.sh
+
+echo "text" --> outputs 'text' in terminal
+
+sh NewFileName.sh --> opens file in shell within terminal
+
+./NewFileName.sh --> ^^^ if permission denied:
+chmode 755 NewFileName.sh --> rerun above line (should fix)
+
+bocal@ubuntu:~/piscine-go$ sh hello.sh
+Hello schander!
+
+
+git add NewFileName.sh
+git commit -m "anything"
+git push
+
+man git commit --> see manual for commit
+
+
+bocal@ubuntu:~/piscine-go$ git config --global credential.helper store
+
+bocal@ubuntu:~/piscine-go$ git clone https://learn.01founders.co/git/schander/piscine-go.git
+Cloning into 'piscine-go'...
+warning: You appear to have cloned an empty repository.
+
+bocal@ubuntu:~/piscine-go$ git add hello.sh
+
+bocal@ubuntu:~/piscine-go$ git commit -m "My very first commit"
+Author identity unknown
+*** Please tell me who you are.
+Run
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'bocal@ubuntu.(none)')
+
+bocal@ubuntu:~/piscine-go$ git config --global user.email "seronc08@gmail.com"
+bocal@ubuntu:~/piscine-go$ git config --global user.name "Seron Chanderabose"
+
+bocal@ubuntu:~/piscine-go$ git add hello.sh
+bocal@ubuntu:~/piscine-go$ git commit -m "My very first commit"
+[master (root-commit) 785f5de] My very first commit
+ 1 file changed, 3 insertions(+)
+ create mode 100644 hello.sh
+
+bocal@ubuntu:~/piscine-go$ git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 260 bytes | 260.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: . Processing 1 references
+remote: Processed 1 references in total
+To https://learn.01founders.co/git/schander/piscine-go.git
+* [new branch]      master -> master
+
+
+https://github.com/GreyCoderK/piscine-go
+https://github.com/4ubak/piscine-go
+
+ls --> list directories
+cd --> current directory
+mkdir --> make directory
+jq --> json query
+wc --> word count
+
+
+Go Language:
+use bash instead of zsh preferably
+package main --> required for each start of .go file
+
+func main()
+{
+  code
+}
+
+setup module in go:
+go mod init example.com/modulename
+go mod init piscine --> creates go.mod file and adds piscine module
+still have an issue? --> go get github.com/01-edu/z01 (copy command shown in terminal)
+
+use ' ' instead of " " for variables in go
